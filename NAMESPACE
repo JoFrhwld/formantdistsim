@@ -2,8 +2,11 @@
 
 export(sim_mixture)
 export(sim_prob_change)
+export(sim_prob_cont)
 importFrom(dplyr,mutate)
 importFrom(dplyr,row_number)
+importFrom(dplyr,rowwise)
 importFrom(purrr,map_vec)
 importFrom(stats,rbeta)
 importFrom(tibble,tibble)
+importFrom(tidyr,unnest)
