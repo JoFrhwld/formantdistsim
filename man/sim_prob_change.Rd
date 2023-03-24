@@ -4,8 +4,22 @@
 \alias{sim_prob_change}
 \title{Sim probabilistic change}
 \usage{
-sim_prob_change(max_year = 100, pop_size = 300, kappa = 10)
+sim_prob_change(max_year = 100, pop_size = 300, phi = 10)
+}
+\arguments{
+\item{max_year}{The total number of "years" the change is spread across}
+
+\item{pop_size}{The total number of simulated data points}
+
+\item{phi}{The "precision" of the beta distribution}
 }
 \description{
-Sim probabilistic change
+Simulate a probabilistic change progressing linearly, in logit space.
+}
+\examples{
+library(ggplot2)
+change1 <- sim_prob_change(max_year = 100, pop_size = 100, phi = 3)
+ggplot(change1)+
+  geom_point(aes(dob, prob_obs))+
+  geom_line(aes(dob, prob_ml))
 }
