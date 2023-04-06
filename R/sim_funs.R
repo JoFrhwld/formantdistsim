@@ -103,7 +103,6 @@ sim_mixture <- function(
 #' @param pop_size The total number of simulated data points
 #' @param phi The "precision" of the beta distribution
 #' @param n Number of simulated values
-#' @param prob Probability of distribution 1
 #' @param mu1 Mean of distrubtion 1
 #' @param sigma1 sd of distribution 1
 #' @param mu2 mean of distribution2
@@ -118,7 +117,6 @@ sim_prob_cont <- function(
     pop_size = 300,
     phi = 10,
     n = 50,
-    prob = 0.2,
     mu1=1,
     sigma1=0.25,
     mu2=0,
