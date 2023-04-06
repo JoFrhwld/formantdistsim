@@ -26,7 +26,7 @@ sim_prob_change <-
   ){
     dobs_pop = 1:max_year
     logit_pop <- seq(logit_low, logit_high, length = 100)
-    prob_pop <- inv_logit(logit_pop)
+    prob_pop <- plogis(logit_pop)
     dobs_obs <- sample(dobs_pop, size = pop_size, replace = T)
     probs_center <- prob_pop[dobs_obs]
     probs_obs <- purrr::map_vec(probs_center, .f = \(p) stats::rbeta(1, shape1 = p*phi, shape2 = (1-p)*phi))
@@ -136,7 +136,3 @@ sim_prob_cont <- function(
 }
 
 
-
-
-#' inverse logit
-inv_logit <- \(x) exp(x)/(1+exp(x))
