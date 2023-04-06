@@ -15,3 +15,7 @@ Imports:
     purrr,
     tibble
 URL: https://jofrhwld.github.io/formantdistsim/
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr

@@ -1,0 +1,25 @@
+---
+title: "up to now"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{up to now}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(formantdistsim)
+```
+
+This package is supposed to simulate an underlying binomial, or logistic change, where the data is generated from a different gaussian, depending on which category was chosen.
+
+```{r}
+
+```
