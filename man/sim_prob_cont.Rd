@@ -9,7 +9,6 @@ sim_prob_cont(
   pop_size = 300,
   phi = 10,
   n = 50,
-  prob = 0.2,
   mu1 = 1,
   sigma1 = 0.25,
   mu2 = 0,
@@ -26,8 +25,6 @@ sim_prob_cont(
 \item{phi}{The "precision" of the beta distribution}
 
 \item{n}{Number of simulated values}
-
-\item{prob}{Probability of distribution 1}
 
 \item{mu1}{Mean of distrubtion 1}
 
