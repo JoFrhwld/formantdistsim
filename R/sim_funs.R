@@ -123,8 +123,16 @@ sim_prob_cont <- function(
     sigma1=0.25,
     mu2=0,
     sigma2=0.25
+    logit_low = -4,
+    logit_high = 4
 ){
-  prob_df <- sim_prob_change(max_year = max_year, pop_size = pop_size, phi = phi)
+  prob_df <- sim_prob_change(
+    max_year = max_year,
+    pop_size = pop_size,
+    phi = phi,
+    logit_low = logit_low,
+    logit_high = logit_high
+  )
   prob_df |>
     rowwise() |>
     mutate(
