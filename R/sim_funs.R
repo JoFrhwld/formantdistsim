@@ -122,7 +122,7 @@ sim_prob_cont <- function(
     mu1=1,
     sigma1=0.25,
     mu2=0,
-    sigma2=0.25
+    sigma2=0.25,
     logit_low = -4,
     logit_high = 4
 ){
