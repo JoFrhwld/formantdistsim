@@ -5,6 +5,8 @@
 #' @param max_year The total number of "years" the change is spread across
 #' @param pop_size The total number of simulated data points
 #' @param phi The "precision" of the beta distribution
+#' @param logit_low The low point in the logit space
+#' @param logut_high The high point in the logit space
 #'
 #' @example examples/sim_prob_change_ex.R
 #'
@@ -18,10 +20,12 @@ sim_prob_change <-
   function(
     max_year = 100,
     pop_size = 300,
-    phi = 10
+    phi = 10,
+    logit_low = -4,
+    logit_high = 4
   ){
     dobs_pop = 1:max_year
-    logit_pop <- seq(-4, 4, length = 100)
+    logit_pop <- seq(logit_low, logit_high, length = 100)
     prob_pop <- inv_logit(logit_pop)
     dobs_obs <- sample(dobs_pop, size = pop_size, replace = T)
     probs_center <- prob_pop[dobs_obs]
