@@ -4,7 +4,13 @@
 \alias{sim_prob_change}
 \title{Sim probabilistic change}
 \usage{
-sim_prob_change(max_year = 100, pop_size = 300, phi = 10)
+sim_prob_change(
+  max_year = 100,
+  pop_size = 300,
+  phi = 10,
+  logit_low = -4,
+  logit_high = 4
+)
 }
 \arguments{
 \item{max_year}{The total number of "years" the change is spread across}
@@ -12,6 +18,10 @@ sim_prob_change(max_year = 100, pop_size = 300, phi = 10)
 \item{pop_size}{The total number of simulated data points}
 
 \item{phi}{The "precision" of the beta distribution}
+
+\item{logit_low}{The low point in the logit space}
+
+\item{logut_high}{The high point in the logit space}
 }
 \description{
 Simulate a probabilistic change progressing linearly, in logit space.
