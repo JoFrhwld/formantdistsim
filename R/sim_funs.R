@@ -134,7 +134,16 @@ sim_prob_cont <- function(
   prob_df |>
     rowwise() |>
     mutate(
-      continuous = list(sim_mixture(prob = prob_obs, n = n))
+      continuous = list(
+        sim_mixture(
+          prob = prob_obs,
+          n = n,
+          mu1 = mu1,
+          mu2 = mu2,
+          sigma1 = sigma1,
+          sigma2 = sigma2
+        )
+      )
     ) |>
     unnest(continuous)->
     full_sim
